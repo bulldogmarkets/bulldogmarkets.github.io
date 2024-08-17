@@ -31,6 +31,8 @@
         background: -webkit-linear-gradient(to top, #283E51, #0A2342);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to top, #283E51, #0A2342); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         background: -olinear-gradient(to top, #283E51, #0A2342);
+
+        cursor: pointer;
     }
 
     .title {
@@ -43,6 +45,19 @@
         font-size:5em;
         font-family: Tahoma, Geneva, sans-serif;
     }
+
+    .title span {
+        transition: text-shadow 0.3s ease-in-out;
+    }
+    .title span:hover {
+        text-shadow: 0 0 10px rgba(0, 188, 212, 0.7), 0 0 20px rgba(0, 188, 212, 0.5);
+    }
+
+    .prevent-select {
+        user-select: none; /* Standard syntax */
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+    }
 </style>
 
 <!--<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>-->
@@ -50,7 +65,7 @@
 
 <body>
 <div id="particles-js"></div> <!-- stats - count particles -->
-<div class="title"><b>bulldog</b>markets</div>
+<div class="title prevent-select"><span><b>bulldog</b></span><span>markets</span></div>
 </body>
 </html>
 
